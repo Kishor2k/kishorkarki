@@ -1,0 +1,129 @@
+@media screen and (max-width:768px){
+    section{
+        padding-block: 20;
+    }
+   .title{
+    margin-inline: auto;
+
+   }
+   .para{
+    text-align: center;
+   }
+    ul{
+        width:0%;
+        transform: translateX(100%); transition:.3s ease;
+        display: none;
+       
+    }
+    .hamburger-menu{
+        display: flex;
+    }
+    .bar{
+        transform-origin: center;
+        transition:.3s ease;
+    }
+    .bar.one.active{
+        transform: translateY(9px) rotate(45deg)
+    }
+    .bar.three.active{
+        transform: translateY(-9px) rotate(-45deg)
+    }
+    .bar.two.active{
+        transform: scale(0);
+    }
+    ul.active{
+        display: flex;
+        position: absolute;
+        background: #fff;
+        top:70px;
+        right:0;
+        flex-direction: column;
+        width:300px;
+        height:200px;
+        padding:$padding;
+        transform: translateX(0%);
+        box-shadow:0px 0px 20px 10px rgba(0,0,0,0.1);
+        border-radius:5px;
+    }
+    header.active ul.active{
+        top:100px;
+    }
+    // about
+    .image-text.flex{
+        flex-direction: column;
+        gap:30px;
+    }
+    .subject{
+        display: none;
+    }
+    .subject ,.about-text{
+        width:100%;
+    }
+    .socialmedia{
+        justify-content: center;
+    }
+    // content
+    .content{
+        width:100%;
+    }
+    .form{
+        width:100%;
+    }
+    
+}
+@media screen and (max-width:500px){
+    // work
+    #work .content{
+        margin-bottom: 250px;
+    }
+    // contact
+    #contact .content{
+        margin-top: 0px;
+    }
+    // skills
+    #work .container{
+        flex-direction: column;
+    }
+    #work .content{
+        margin-bottom: 30px;
+    }
+    .skills{
+        position: relative;
+        transform: translateY(0px);
+    }
+   .card{
+    width:100%;
+   }
+   
+   .card.code{
+    margin-top: 50px;
+   }
+   .form{
+    margin-top: 30px;
+   }
+   footer{
+    .container{
+        flex-direction: column;
+    }
+    .footer-text{
+        order:3;
+    }
+    .logo{
+        width:50px;
+    }
+   }
+}
+@media screen and (max-width:1050px){
+    #contact .container{
+        justify-content: center;
+    }
+    .contact-img{
+        display: none;
+    }
+}
+@media screen and (max-height:1280px){
+    section{
+        min-height:100px;
+      
+    }
+}

@@ -1,0 +1,43 @@
+.loader{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    min-height:100vh;
+    background: $bg-clr;
+    z-index:1000;
+
+}
+#logosvg{
+   
+    stroke: $primary-clr;
+    stroke-width:1px;
+    stroke-dasharray: 420;
+    stroke-dashoffset: 420;
+    animation: strokeanimation 2s linear forwards;
+}
+#logopath{
+    fill:transparent;
+    animation:fillanimation .5s 2s linear forwards;
+}
+@keyframes strokeanimation {
+    to{
+        stroke-dashoffset: 0;
+    }
+    
+}
+@keyframes fillanimation {
+    to{
+        fill:$primary-clr;
+    }
+}
+.loader.hide{
+   display: none;
+}
+main{
+    opacity:0;
+    transition:.3s ease-out;
+}
+main.show{
+    opacity: 1;
+}
